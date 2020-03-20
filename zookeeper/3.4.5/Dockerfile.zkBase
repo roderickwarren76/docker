@@ -16,5 +16,3 @@ RUN cd /app/; \
 COPY zoo.standalone.cfg /app/zookeeper-3.4.5/conf/zoo.cfg
 COPY java.env /app/zookeeper-3.4.5/conf/java.env
 COPY log4j.properties /app/zookeeper-3.4.5/conf/log4j.properties
-
-CMD ["/app/zookeeper-3.4.5/bin/zkServer.sh", "start-foreground"]
