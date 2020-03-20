@@ -13,6 +13,5 @@ RUN cd /app/; \
     tar --no-same-owner -zxvpf zookeeper-3.4.5.tar.gz; \
     rm zookeeper-3.4.5.tar.gz
 
-COPY zoo.standalone.cfg /app/zookeeper-3.4.5/conf/zoo.cfg
 COPY java.env /app/zookeeper-3.4.5/conf/java.env
 COPY log4j.properties /app/zookeeper-3.4.5/conf/log4j.properties

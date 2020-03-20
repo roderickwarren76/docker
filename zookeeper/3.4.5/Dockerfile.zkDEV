@@ -1,0 +1,6 @@
+FROM rwlab/zk345:base
+MAINTAINER Roderick Warren  <roderickwarren76@gmail.com>
+
+COPY zoo.standalone.cfg /app/zookeeper-3.4.5/conf/zoo.cfg
+
+CMD ["/app/zookeeper-3.4.5/bin/zkServer.sh", "start-foreground"]
