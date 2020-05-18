@@ -1,0 +1,19 @@
+FROM rwlab/centos7:latest
+MAINTAINER Roderick Warren  <roderickwarren76@gmail.com>
+
+# Upgrading system
+
+RUN yum -y upgrade
+
+# Downloading Java
+COPY jdk-8u131-linux-x64.rpm /tmp/jdk-8u131-linux-x64.rpm
+
+RUN yum -y install /tmp/jdk-8u131-linux-x64.rpm
+
+RUN alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
+
+RUN alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
+
+RUN alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+
+ENV JAVA_HOME /usr/java/latest

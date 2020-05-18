@@ -1,0 +1,4 @@
+FROM rwlab/jetty:9.4.6.v20170531
+MAINTAINER Roderick Warren  <roderickwarren76@gmail.com>
+WORKDIR /usr/local/jetty/jetty-distribution-9.4.6.v20170531/
+CMD java -jar start.jar

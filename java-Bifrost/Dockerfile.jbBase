@@ -1,0 +1,12 @@
+FROM rwlab/centos7:latest
+MAINTAINER Roderick Warren  <roderickwarren76@gmail.com>
+
+RUN yum install -y java-1.8.0-openjdk-devel
+
+RUN mkdir /usr/local/jetty 
+
+COPY jetty-distribution-9.4.6.v20170531.tar.gz /usr/local/jetty/jetty-distribution-9.4.6.v20170531.tar.gz  
+
+RUN cd /usr/local/jetty; \
+	tar --no-same-owner -zxvpf jetty-distribution-9.4.6.v20170531.tar.gz; \
+	rm jetty-distribution-9.4.6.v20170531.tar.gz
